@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('tech.webp'); /* Replace with your image path */
+            background-size: cover; /* Makes the image cover the entire container */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 700px;
+            background: linear-gradient(to bottom right, #007acc, #ffa500);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .slideshow {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            text-align: left;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            opacity: 0;
+            transform: translateX(100%); /* Start off-screen to the right */
+        }
+
+        .slide.active {
+            display: flex;
+            opacity: 1;
+            transform: translateX(0); /* Slide into the center */
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            background-color: #fff;
+            max-width: 100px;
+            height: auto;
+            display: inline-block;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .details {
+            flex: 1;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to bottom right, #007acc, #f8fdff);
+            border-radius: 8px;
+        }
+
+        .details h2 {
+            margin: 0 0 10px;
+            font-size: 1.8em;
+            color: #151414;
+        }
+
+        .details p {
+            margin: 5px 0;
+            font-size: 1.8em;
+            color: #0d0d0d;
+        }
+
+        .picture {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #007acc, #ffa500);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .picture:hover {
+            transform: scale(1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .picture img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Increases space between buttons */
+        }
+
+        .controls button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .controls button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button a:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slideshow">
+            <div class="slide active">
+                <div class="details">
+                    <div class="logo">
+                        <img src="bclogo-removebg-preview.png" alt="School Logo">
+                    </div>
+                    <h2>Name: Juliecor Repompo</h2>
+                    <p><b>Course: BSIT</b></p>
+                    <p><b>Role: Coder</b></p>
+                </div>
+                <div class="picture">
+                    <img src="student-removebg-preview.png" alt="John's Picture">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="details">
+                    <div class="logo">
+                        <img src="bclogo-removebg-preview.png" alt="School Logo">
+                    </div>
+                    <h2>Name: John Andrew Dabuco Jr.</h2>
+                    <p><b>Course: BSIT</b></p>
+                    <p><b>Role: Assembler / Boldstar</b></p>
+                </div>
+                <div class="picture">
+                    <img src="andrew-removebg-preview.png" alt="John's Picture">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="details">
+                    <h2>Name: Jane Smith</h2>
+                    <h2>Course: Mechanical Engineering</h2>
+                    <p>Role: Designer</p>
+                </div>
+                <div class="picture">
+                    <img src="student-removebg-preview.png" alt="Jane's Picture">
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="back-button">
+            <a href="index.html">Back to Index</a>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                slide.style.transform = i > index ? 'translateX(100%)' : 'translateX(-100%)'; // Slide out
+            });
+            slides[index].classList.add('active');
+            slides[index].style.transform = 'translateX(0)'; // Slide in
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
